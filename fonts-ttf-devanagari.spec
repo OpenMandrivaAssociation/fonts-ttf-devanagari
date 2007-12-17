@@ -8,7 +8,6 @@ Group: System/Fonts/True type
 Source0: raghu.ttf.bz2
 #URL: 
 BuildArch:	noarch
-BuildRoot:	%_tmppath/%name-%version-%release-root
 BuildRequires:	freetype-tools
 Requires(post): fontconfig
 Requires(postun): fontconfig
