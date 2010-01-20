@@ -1,7 +1,7 @@
 Summary: Devanagari TTF font(s)
 Name: fonts-ttf-devanagari
 Version: 1.0
-Release: %mkrel 2
+Release: %mkrel 3
 License: Free use and distribution
 Group: System/Fonts/True type
 # it was previously distributed with XFree86; it's in public domain
@@ -10,8 +10,6 @@ Source0: raghu.ttf.bz2
 BuildArch:	noarch
 BuildRoot:	%_tmppath/%name-%version-%release-root
 BuildRequires:	freetype-tools
-Requires(post): fontconfig
-Requires(postun): fontconfig
 
 %description
 This package contains fonts for the devanagari script.
@@ -38,13 +36,6 @@ done
 
 %post
 touch %{_datadir}/fonts/TTF
-[ -x %_bindir/fc-cache ] && %{_bindir}/fc-cache 
-
-%postun
-# 0 means a real uninstall
-if [ "$1" = "0" ]; then
-  [ -x %_bindir/fc-cache ] && %{_bindir}/fc-cache 
-fi
 
 %clean
 rm -fr %buildroot
