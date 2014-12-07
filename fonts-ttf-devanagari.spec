@@ -1,7 +1,7 @@
 Summary:	Devanagari TTF font(s)
 Name:		fonts-ttf-devanagari
 Version:	1.0
-Release:	14
+Release:	15
 License:	Free use and distribution
 Group:	System/Fonts/True type
 #URL:	
